@@ -5,7 +5,7 @@
         <item name="colorPrimary">@color/text_pink</item>
         <item name="android:colorBackground">@color/pink_bg</item>
         <item name="colorOnPrimary">@color/hotpink_hover</item>
-        <item name="android:textColor">@color/text_pink</item>
+        <item name="colorAccent">@color/hotpink_highlight</item>
     </style>
 
     <style name="Theme.MiPokedex_IslasAbril" parent="Base.Theme.MiPokedex_IslasAbril" />

@@ -6,11 +6,11 @@
     <!-- Titulos resaltados -->
     <string name="altura_t">Altura</string>
     <string name="habilidad_t">Habilidad</string>
-    <string name="peso_t">Estatura</string>
+    <string name="peso_t">Peso</string>
 
     <!-- valores ig -->
     <string name="altura">1,1 m</string>
-    <string name="habilidad">Alma cura/Regeneración</string>
+    <string name="habilidad">Alma cura</string>
     <string name="peso">31,0 kg</string>
     <string name="numero_nacional">#531</string>
     <string name="tipo">Normal</string>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="titulo_principal">
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">23sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/hotpink_highlight</item>
     </style>
 
     <style name="texto_normal">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/text_pink</item>
     </style>
 
     <style name="pokemon_principal_name" parent="TextAppearance.Material3.BodyLarge">
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">35sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/white</item>
     </style>
@@ -25,16 +25,22 @@
     </style>
 
     <style name="texto_parrafo">
-        <item name="android:textSize">23sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/text_pink</item>
     </style>
 
     <style name="highlighted_text">
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/text_pink</item>
         <item name="backgroundColor">@color/hotpink_highlight</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textAlignment">center</item>
+
     </style>
     
 </resources>
