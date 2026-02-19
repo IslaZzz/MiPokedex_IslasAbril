@@ -3,7 +3,7 @@
     <!-- Pokemon name -->
     <string name="pokemon_nombre">Audino</string>
 
-    <!-- Titulos rojos -->
+    <!-- Titulos resaltados -->
     <string name="altura_t">Altura</string>
     <string name="habilidad_t">Habilidad</string>
     <string name="peso_t">Estatura</string>

@@ -8,12 +8,20 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_numero_nacional"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/numero_nacional"
+        android:textAppearance="@style/texto_normal"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="124dp" />
 
+    <TextView
+        android:id="@+id/tv_pokemon_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pokemon_nombre"
+        android:textAppearance="@style/pokemon_principal_name"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="55dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
