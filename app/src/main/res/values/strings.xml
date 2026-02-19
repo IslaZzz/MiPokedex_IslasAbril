@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">MiPokedex_IslasAbril</string>
+    <string name="app_name">MiPokedex</string>
+    <!-- Pokemon name -->
+    <string name="pokemon_nombre">Audino</string>
+
+    <!-- Titulos rojos -->
+    <string name="altura_t">Altura</string>
+    <string name="habilidad_t">Habilidad</string>
+    <string name="peso_t">Estatura</string>
+
+    <!-- valores ig -->
+    <string name="altura">1,1 m</string>
+    <string name="habilidad">Alma cura/Regeneración</string>
+    <string name="peso">31,0 kg</string>
+    <string name="numero_nacional">#531</string>
+    <string name="tipo">Normal</string>
+
+    <string name="descripcion">
+        Audino está basado en un estetoscopio. Tiene un oído muy sensible,
+        haciendo que su sentido del oído sea infalible.
+        Con ayuda de la antena de sus orejas,
+        si toca con ellas a alguien puede conocer
+        su estado de ánimo y de salud por los latidos del corazón.
+    </string>
+
+    <!-- Otros (sorry no puse los seguidos, si no los más chilos 🤑 -->
+    <string name="nombre_pkm2">Tepig N.º0447</string>
+    <string name="nombre_pkm3">Riolu N.º0498</string>
+    
 </resources>
