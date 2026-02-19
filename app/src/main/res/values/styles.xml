@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="titulo_principal">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/hotpink_highlight</item>
+    </style>
+
+    <style name="texto_normal">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_pink</item>
+    </style>
+
+    <style name="nombre_pokemon_principal">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_pink</item>
+    </style>
+
+    <style name="letra_peque">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_pink</item>
+    </style>
+
+    <style name="texto_parrafo">
+        <item name="android:textSize">23sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_pink</item>
+    </style>
+
+    <style name="highlighted_text">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_pink</item>
+        <item name="backgroundColor">@color/hotpink_highlight</item>
+    </style>
+    
+</resources>

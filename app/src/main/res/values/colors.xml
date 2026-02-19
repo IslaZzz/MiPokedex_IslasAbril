@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- que no se note cuál es mi color fav-->
+    <color name="pink_bg">#FAB9F3</color>
+    <color name="hotpink_highlight">#D008A1</color>
+    <color name="text_pink">#1F0017</color>
+
 </resources>
