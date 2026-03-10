@@ -8,6 +8,7 @@ import androidx.navigation.toRoute
 import dummies.getNextPokemon
 import dummies.getPokemonByID
 import dummies.getPreviousPokemon
+import dummies.initializePokemonEvolutions
 import dummies.showAllPokemons
 import islas.abril.composepokedex_islasabril.Pokemon
 import navigation.PokemonList
@@ -17,6 +18,7 @@ import screens.PokedexMenuScreen
 @Composable
 fun MyApp(){
     val navController = rememberNavController()
+    initializePokemonEvolutions()
     NavHost(navController, startDestination = PokemonList){
         composable<PokemonList>{
             PokedexMenuScreen(showAllPokemons(), onNavigationDetail = {id ->navController.navigate(route=PokemonDetail(id=id))})

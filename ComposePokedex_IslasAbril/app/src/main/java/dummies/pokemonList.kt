@@ -42,6 +42,18 @@ val pokemonList = listOf<Pokemon>(
         R.drawable.eevee,
         emptyList()
     ),
+    Pokemon(
+        "Vaporeon",
+        134,
+        "Agua",
+        false,
+        29.0,
+        1.0,
+        "Hey guys, did you know that in terms of male human and female Pokémon breeding, Vaporeon is the most compatible Pokémon for humans? ",
+        "Absorbe Agua",
+        R.drawable.vaporeon,
+        emptyList()
+    ),
 
     Pokemon(
         "Pichu",
@@ -370,4 +382,117 @@ fun getNextPokemon(number:Int):Pokemon{
     }.get(0))
     val nextIndex = if (index >= pokemonList.size - 1) 0 else index + 1
     return pokemonList[nextIndex]
+}
+
+fun initializePokemonEvolutions(){
+    getPokemonByID(25).evolutions = listOf(
+        getPokemonByID(172),
+        getPokemonByID(26)
+    )
+
+    getPokemonByID(26).evolutions = listOf(
+        getPokemonByID(25)
+    )
+
+    getPokemonByID(172).evolutions = listOf(
+        getPokemonByID(25),
+        getPokemonByID(26)
+    )
+
+    getPokemonByID(133).evolutions = listOf(
+        getPokemonByID(134),
+        getPokemonByID(700)
+    )
+
+    getPokemonByID(134).evolutions = listOf(
+        getPokemonByID(133)
+    )
+
+    getPokemonByID(700).evolutions = listOf(
+        getPokemonByID(133)
+    )
+
+    getPokemonByID(175).evolutions = listOf(
+        getPokemonByID(176)
+    )
+
+    getPokemonByID(176).evolutions = listOf(
+        getPokemonByID(175),
+        getPokemonByID(468)
+    )
+
+    getPokemonByID(468).evolutions = listOf(
+        getPokemonByID(176)
+    )
+
+    getPokemonByID(180).evolutions = listOf(
+        getPokemonByID(181)
+    )
+
+    getPokemonByID(181).evolutions = listOf(
+        getPokemonByID(180)
+    )
+
+    getPokemonByID(258).evolutions = listOf(
+        getPokemonByID(259)
+    )
+
+    getPokemonByID(259).evolutions = listOf(
+        getPokemonByID(258),
+        getPokemonByID(260)
+    )
+
+    getPokemonByID(260).evolutions = listOf(
+        getPokemonByID(259)
+    )
+
+    getPokemonByID(403).evolutions = listOf(
+        getPokemonByID(404)
+    )
+
+    getPokemonByID(404).evolutions = listOf(
+        getPokemonByID(403),
+        getPokemonByID(405)
+    )
+
+    getPokemonByID(405).evolutions = listOf(
+        getPokemonByID(404)
+    )
+
+    getPokemonByID(447).evolutions = listOf(
+        getPokemonByID(448)
+    )
+
+    getPokemonByID(448).evolutions = listOf(
+        getPokemonByID(447)
+    )
+
+    getPokemonByID(498).evolutions = listOf(
+        getPokemonByID(499)
+    )
+
+    getPokemonByID(499).evolutions = listOf(
+        getPokemonByID(498),
+        getPokemonByID(500)
+    )
+
+    getPokemonByID(500).evolutions = listOf(
+        getPokemonByID(499)
+    )
+
+    getPokemonByID(531).evolutions = listOf(
+        getPokemonByID(532)
+    )
+
+    getPokemonByID(532).evolutions = listOf(
+        getPokemonByID(531)
+    )
+
+    getPokemonByID(657).evolutions = listOf(
+        getPokemonByID(658)
+    )
+
+    getPokemonByID(658).evolutions = listOf(
+        getPokemonByID(657)
+    )
 }

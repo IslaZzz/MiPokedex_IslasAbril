@@ -19,7 +19,7 @@ import islas.abril.composepokedex_islasabril.R
 fun PokemonHeader(name: String, number: Int, fav: Boolean) {
     Row(
         modifier = Modifier.fillMaxWidth()
-            .padding(20.dp),
+            .padding(35.dp,20.dp,20.dp,20.dp),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Column(

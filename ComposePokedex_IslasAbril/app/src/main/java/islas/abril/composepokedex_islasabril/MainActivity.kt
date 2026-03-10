@@ -16,7 +16,7 @@ data class Pokemon(
     val description: String,
     val ability: String,
     val imageRes: Int,
-    val evolutions: List<Pokemon>
+    var evolutions: List<Pokemon>
 )
 
 

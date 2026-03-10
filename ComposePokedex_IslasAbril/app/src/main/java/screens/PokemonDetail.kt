@@ -23,6 +23,7 @@ import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
@@ -31,19 +32,21 @@ import components.PokemonHeader
 import components.chip
 import components.recibirPokemonSecundario
 import dummies.getNextPokemon
+import dummies.getPokemonByID
 import dummies.getPreviousPokemon
 import dummies.returnOnePokemon
 import islas.abril.composepokedex_islasabril.Pokemon
 import islas.abril.composepokedex_islasabril.R
 import islas.abril.composepokedex_islasabril.ui.theme.ComposePokedex_IslasAbrilTheme
 import islas.abril.composepokedex_islasabril.ui.theme.white
+import pokemonEvolutions
 import utilites.getColorsByType
 
 @Preview(showBackground = true)
 @Composable
 fun PokemonPreview() {
     ComposePokedex_IslasAbrilTheme {
-        val pokemon = returnOnePokemon()
+        val pokemon = getPokemonByID(133)
         Greeting(
             pokemon,
             getPreviousPokemon(pokemon.number),
@@ -80,7 +83,6 @@ fun PokemonCard(pokemon: Pokemon, previousPokemon: Pokemon, nextPokemon: Pokemon
                 .size(250.dp)
                 .offset(x = 70.dp, y = (-70).dp)
         )
-
         Image(
             painterResource(pokemon.imageRes), contentDescription = pokemon.name,
             modifier = Modifier.offset(0.dp, -45.dp)
@@ -88,7 +90,6 @@ fun PokemonCard(pokemon: Pokemon, previousPokemon: Pokemon, nextPokemon: Pokemon
                 .size(200.dp),
             contentScale = ContentScale.Fit
         )
-
         Card(
             Modifier.fillMaxWidth()
                 .fillMaxHeight()
@@ -131,6 +132,18 @@ fun PokemonCard(pokemon: Pokemon, previousPokemon: Pokemon, nextPokemon: Pokemon
                         horizontalArrangement = Arrangement.Center
                     ) {
                         Text(pokemon.description, Modifier)
+                    }
+                    Row(modifier = Modifier.fillMaxWidth(.8f)
+                        .align(CenterHorizontally)
+                        .padding(top = 30.dp),
+                        horizontalArrangement = Arrangement.Center) {
+                        Column() {
+                            Text("Evoluciones", Modifier,
+                                fontWeight = FontWeight.Bold)
+                            pokemonEvolutions(
+                                pokemon.evolutions
+                                )
+                        }
                     }
                 }
 
