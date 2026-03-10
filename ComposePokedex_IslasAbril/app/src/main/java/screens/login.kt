@@ -65,9 +65,7 @@ import androidx.compose.runtime.setValue
         Row() {
             Button(
                 onClick = {
-                    if (username == "admin" && password == "1234") {
-                        onLoginSuccess()
-                    }
+                    onLoginSuccess()
                 }
             ){
                 Text("Login")
