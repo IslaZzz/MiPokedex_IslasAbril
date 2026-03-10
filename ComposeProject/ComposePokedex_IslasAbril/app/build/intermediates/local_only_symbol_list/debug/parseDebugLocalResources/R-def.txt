@@ -1,0 +1,24 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+color yellow
+drawable ic_arrow_circle_left
+drawable ic_arrow_circle_right
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable ic_smiley_filled
+drawable ic_smiley_outline
+drawable pikachu
+drawable pokeball
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Theme.ComposePokedex_IslasAbril
+xml backup_rules
+xml data_extraction_rules
