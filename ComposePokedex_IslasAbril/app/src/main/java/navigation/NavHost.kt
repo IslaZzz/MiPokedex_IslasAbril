@@ -9,25 +9,49 @@ import dummies.getNextPokemon
 import dummies.getPokemonByID
 import dummies.getPreviousPokemon
 import dummies.initializePokemonEvolutions
-import dummies.showAllPokemons
-import islas.abril.composepokedex_islasabril.Pokemon
-import navigation.PokemonList
+import screens.CreateAccount
 import screens.Greeting
-import screens.PokedexMenuScreen
+import screens.loginAccount
 
 @Composable
 fun MyApp(){
+
     val navController = rememberNavController()
+
     initializePokemonEvolutions()
-    NavHost(navController, startDestination = PokemonList){
-        composable<PokemonList>{
-            PokedexMenuScreen(showAllPokemons(), onNavigationDetail = {id ->navController.navigate(route=PokemonDetail(id=id))})
+
+    NavHost(
+        navController = navController,
+        startDestination = Login
+    ){
+
+        composable<Login>{
+            loginAccount(
+                onLoginSuccess = {
+                    navController.navigate(PokemonDetail)
+                },
+                onRegisterClick = {
+                    navController.navigate(Register)
+                }
+            )
         }
+
+        composable<Register>{
+            CreateAccount(
+                onRegisterSuccess = {
+                    navController.navigate(Login)
+                }
+            )
+        }
+
         composable<PokemonDetail> { backStackEntry ->
+
             val route: PokemonDetail = backStackEntry.toRoute()
+
             val pokemon = getPokemonByID(route.id)
             val previousPokemon = getPreviousPokemon(pokemon.number)
             val nextPokemon = getNextPokemon(pokemon.number)
+
             Greeting(pokemon, previousPokemon, nextPokemon)
         }
     }
