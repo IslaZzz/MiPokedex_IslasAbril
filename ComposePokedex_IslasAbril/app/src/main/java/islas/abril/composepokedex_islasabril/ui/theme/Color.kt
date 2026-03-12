@@ -33,3 +33,6 @@ val dragonType = Color(0xFF7038F8)
 val steelType = Color(0xFFB8B8D0)
 val darkType = Color(0xFF705848)
 val fairyType = Color(0xFFEE99AC)
+val beige = Color(0xFFFFFEF2)
+
+val reddy = Color(0xFFAF6E6E)

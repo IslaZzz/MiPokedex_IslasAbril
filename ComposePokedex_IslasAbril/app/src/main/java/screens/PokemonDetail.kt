@@ -27,6 +27,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
+import androidx.navigation.NavController
 import components.Direccion
 import components.PokemonHeader
 import components.chip
@@ -42,34 +43,37 @@ import islas.abril.composepokedex_islasabril.ui.theme.white
 import pokemonEvolutions
 import utilites.getColorsByType
 
-@Preview(showBackground = true)
-@Composable
-fun PokemonPreview() {
-    ComposePokedex_IslasAbrilTheme {
-        val pokemon = getPokemonByID(133)
-        Greeting(
-            pokemon,
-            getPreviousPokemon(pokemon.number),
-            getNextPokemon(pokemon.number)
-        )
-    }
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun PokemonPreview() {
+//    ComposePokedex_IslasAbrilTheme {
+//        val pokemon = getPokemonByID(133)
+//        Greeting(
+//            pokemon,
+//            getPreviousPokemon(pokemon.number),
+//            getNextPokemon(pokemon.number)
+//
+//        )
+//    }
+//}
 
 @Composable
-fun Greeting(pokemon: Pokemon, previousPokemon: Pokemon,nextPokemon: Pokemon) {
+fun Greeting(pokemon: Pokemon, previousPokemon: Pokemon,nextPokemon: Pokemon,
+             navController: NavController
+) {
     Column(
         Modifier.background(
             getColorsByType(pokemon).first
         )
     ) {
         PokemonHeader(pokemon.name, pokemon.number, pokemon.fav)
-        PokemonCard(pokemon, previousPokemon, nextPokemon)
+        PokemonCard(pokemon, previousPokemon, nextPokemon, navController)
 
     }
 }
 
 @Composable
-fun PokemonCard(pokemon: Pokemon, previousPokemon: Pokemon, nextPokemon: Pokemon) {
+fun PokemonCard(pokemon: Pokemon, previousPokemon: Pokemon, nextPokemon: Pokemon, navController: NavController) {
     Box(
         contentAlignment = Alignment.TopCenter,
         modifier = Modifier.fillMaxSize()
@@ -159,7 +163,8 @@ fun PokemonCard(pokemon: Pokemon, previousPokemon: Pokemon, nextPokemon: Pokemon
                             nombre = previousPokemon.name,
                             direccion = Direccion.LEFT,
                             imagen = previousPokemon.imageRes,
-                            numero = previousPokemon.number
+                            numero = previousPokemon.number,
+                            navController
                         )
 
                     }
@@ -168,7 +173,8 @@ fun PokemonCard(pokemon: Pokemon, previousPokemon: Pokemon, nextPokemon: Pokemon
                             nombre = nextPokemon.name,
                             direccion = Direccion.RIGHT,
                             imagen = nextPokemon.imageRes,
-                            numero = nextPokemon.number
+                            numero = nextPokemon.number,
+                            navController
                         )
                     }
                 }

@@ -55,7 +55,7 @@ fun MyApp(){
             val pokemon = getPokemonByID(route.id)
             val previousPokemon = getPreviousPokemon(pokemon.number)
             val nextPokemon = getNextPokemon(pokemon.number)
-            Greeting(pokemon, previousPokemon, nextPokemon)
+            Greeting(pokemon, previousPokemon, nextPokemon,navController)
         }
     }
 }

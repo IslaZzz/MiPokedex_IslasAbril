@@ -1,6 +1,7 @@
 package components
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -13,9 +14,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import navigation.PokemonDetail
 
 @Composable
-fun recibirPokemonSecundario(nombre: String, direccion: Direccion, imagen: Int, numero:Int ){
+fun recibirPokemonSecundario(nombre: String, direccion: Direccion, imagen: Int, numero:Int,
+                             navController: NavController){
 
 
     Row(
@@ -36,6 +40,9 @@ fun recibirPokemonSecundario(nombre: String, direccion: Direccion, imagen: Int, 
                 ),
                 contentDescription = "Anterior",
                 modifier = Modifier.size(32.dp)
+                    .clickable {
+                        navController.navigate(PokemonDetail(numero))
+                    }
             )
         }
 
@@ -61,6 +68,9 @@ fun recibirPokemonSecundario(nombre: String, direccion: Direccion, imagen: Int, 
                 ),
                 contentDescription = "Siguiente",
                 modifier = Modifier.size(32.dp)
+                    .clickable {
+                        navController.navigate(PokemonDetail(numero))
+                    }
             )
         }
     }
