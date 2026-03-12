@@ -41,11 +41,11 @@ import islas.abril.composepokedex_islasabril.ui.theme.iceType
 import islas.abril.composepokedex_islasabril.ui.theme.reddy
 import islas.abril.composepokedex_islasabril.ui.theme.waterType
 
-//@Preview (showBackground = true)
-//@Composable
-//fun previewLoginAccount(){
-//    loginAccount()
-//}
+@Preview (showBackground = true)
+@Composable
+fun previewLoginAccount(){
+   loginAccount({}, {})
+}
 
 @Composable
     fun loginAccount(
@@ -60,7 +60,6 @@ import islas.abril.composepokedex_islasabril.ui.theme.waterType
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(20.dp)
             .background(beige),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
